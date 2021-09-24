@@ -97,10 +97,11 @@ public class MAPApplicationContext implements Serializable {
 
         if (oid == null || oid.length != oidTemplate.length)
             return null;
-        for (int i1 = 0; i1 < oidTemplate.length - 2; i1++) {
-            if (oid[i1] != oidTemplate[i1])
-                return null;
-        }
+        
+        //for (int i1 = 0; i1 < oidTemplate.length - 2; i1++) {
+        //    if (oid[i1] != oidTemplate[i1])
+        //        return null;
+        //}
 
         MAPApplicationContextName contextName = MAPApplicationContextName.getInstance(oid[6]);
         MAPApplicationContextVersion contextVersion = MAPApplicationContextVersion.getInstance(oid[7]);
